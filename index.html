@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Diwali Air and Darshan</title>
+<style>
+:root{--bg:#fbf6ea;--card:#fffdf7;--ink:#1d1b3a;--mut:#6a6784;--acc:#e8870e;--ind:#1f1d5c;--ind2:#34308a;--line:#e9dfc8;--tag:#f1ead8;--mar:#b4235a}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.55 "Segoe UI",system-ui,-apple-system,Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+header{background:linear-gradient(160deg,var(--ind),var(--ind2));color:#fff;padding:22px 18px 40px;position:relative;overflow:hidden}
+header:before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23f2a516' stroke-opacity='.35' stroke-width='1.2'%3E%3Ccircle cx='32' cy='32' r='5'/%3E%3Cpath d='M32 8c4 6 4 12 0 18-4-6-4-12 0-18zM32 38c4 6 4 12 0 18-4-6-4-12 0-18zM8 32c6-4 12-4 18 0-6 4-12 4-18 0zM38 32c6-4 12-4 18 0-6 4-12 4-18 0z'/%3E%3C/g%3E%3Ccircle cx='0' cy='0' r='2' fill='%23f2a516' fill-opacity='.4'/%3E%3Ccircle cx='64' cy='0' r='2' fill='%23f2a516' fill-opacity='.4'/%3E%3Ccircle cx='0' cy='64' r='2' fill='%23f2a516' fill-opacity='.4'/%3E%3Ccircle cx='64' cy='64' r='2' fill='%23f2a516' fill-opacity='.4'/%3E%3C/svg%3E");opacity:.9}
+header>*{position:relative}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#ffcf7a;margin-bottom:6px}
+header h1{margin:0;font:700 28px/1.15 Georgia,"Times New Roman",serif}
+header p{margin:6px 0 0;color:#dcdaf5;font-size:14.5px}
+.diya{position:absolute;right:16px;top:18px;width:44px;height:44px}
+
+main{max-width:720px;margin:-22px auto 0;padding:0 14px 96px;position:relative}
+.picker{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:0 6px 18px rgba(31,29,92,.10)}
+.picker label{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);display:block;margin-bottom:6px}
+select{width:100%;padding:12px;font-size:16px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 0}
+.chip{border:1.5px solid var(--ind);background:#fff;border-radius:999px;padding:7px 16px;font-size:14px;cursor:pointer;color:var(--ind);font-weight:600}
+.chip.on{background:var(--ind);color:#fff}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;margin:14px 0;box-shadow:0 2px 8px rgba(31,29,92,.05)}
+.card h2{margin:0 0 10px;font:700 19px/1.25 Georgia,serif;color:var(--ind);display:flex;align-items:center;gap:8px}
+.card h2:before{content:"";width:8px;height:8px;background:var(--acc);transform:rotate(45deg);flex:none}
+.big{font:700 52px/1 Georgia,serif;color:#c9c3dd;margin:6px 0 10px}
+.badge{display:inline-block;background:var(--tag);color:#7a4a00;border-radius:6px;padding:2px 8px;font-size:12px;font-weight:600}
+.row{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-top:1px dashed var(--line);font-size:15px}
+.row:first-of-type{border-top:0}.row span:last-child{color:var(--mut);text-align:right}
+.chart{height:140px;border:1.5px dashed #d8cdae;border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--mut);font-size:14px;text-align:center;padding:10px;background:repeating-linear-gradient(0deg,#f6efdc 0 1px,transparent 1px 34px)}
+.note{background:#fff4dc;border-left:4px solid var(--acc);padding:10px 14px;border-radius:10px;font-size:14px;margin:14px 0}
+a.btn{display:block;text-align:center;background:var(--ind);color:#fff;text-decoration:none;padding:13px;border-radius:12px;margin-top:10px;font-weight:600;border-bottom:3px solid var(--acc)}
+nav{position:fixed;bottom:0;left:0;right:0;background:var(--ind);display:flex;padding-bottom:env(safe-area-inset-bottom)}
+nav a{flex:1;text-align:center;text-decoration:none;padding:12px 2px 14px;border:0;background:none;font-size:13px;color:#b8b5e0;cursor:pointer}
+nav a.on{color:#fff;font-weight:700;box-shadow:inset 0 3px 0 var(--acc)}
+.tab{display:none}.tab.on{display:block}
+small{color:var(--mut)}ul{padding-left:20px;margin:6px 0}li{margin:4px 0}
+.player{aspect-ratio:16/9;background:#1d1b3a;border-radius:14px;margin:12px 0 6px;overflow:hidden}.player iframe{width:100%;height:100%;border:0}.ph{height:100%;display:flex;align-items:center;justify-content:center;color:#c9c3dd;font-size:14px;text-align:center;padding:10px}
+.cats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0}
+.cat{border:2px solid var(--ind);background:#fff;border-radius:12px;padding:8px 4px;font-size:13px;font-weight:700;color:var(--ind);cursor:pointer;line-height:1.25}
+.cat small{display:block;font-weight:600;color:#44415f}
+.cat.on{outline:3px solid var(--acc)}
+.sw{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:5px;vertical-align:-1px;border:1px solid #1d1b3a}
+.adv{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-top:1px dashed var(--line)}
+.adv:first-child{border-top:0}.adv svg{flex:none;width:52px;height:52px}
+.adv b{display:block}.src{font-size:12.5px;color:#4a4766}
+.lbl{background:#eaf0ff;border-left:4px solid var(--ind);padding:10px 14px;border-radius:10px;font-size:14px;margin:10px 0}
+.f2{display:flex;gap:8px;flex-wrap:wrap}.f2 input{flex:1;min-width:130px;padding:10px;font-size:15px;border:1.5px solid var(--line);border-radius:12px}
+nav a{font-size:12px}
+
+header{padding:26px 18px 48px}
+header h1{font-size:31px;letter-spacing:.2px}
+.diya{width:56px;height:56px;filter:drop-shadow(0 4px 10px rgba(242,165,22,.45))}
+.picker{border-radius:20px;box-shadow:0 10px 28px rgba(31,29,92,.16)}
+.card{transition:box-shadow .2s}
+.card h2{border-bottom:1px solid var(--line);padding-bottom:8px}
+.big{font-size:56px;letter-spacing:4px}
+.scale{display:flex;border-radius:10px;overflow:hidden;margin:12px 0 4px;border:1px solid #1d1b3a}
+.scale span{flex:1;padding:7px 0;text-align:center;font-size:11px;font-weight:700;color:#1d1b3a}
+.scale span:nth-child(5),.scale span:nth-child(6){color:#fff}
+.legend small{display:block;margin-top:2px}
+.foot{text-align:center;color:#55526f;font-size:12.5px;padding:6px 10px 18px}
+nav{box-shadow:0 -4px 16px rgba(31,29,92,.25)}
+nav a.on{background:rgba(255,255,255,.08)}
+</style><noscript><style>.tab{display:block!important}nav{display:none}.picker{display:none}</style></noscript></head><body>
+<header><svg class="diya" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4c3 5 5 8 0 13-5-5-3-8 0-13z" fill="#ffb02e"/><path d="M24 9c1.5 2.5 2 4 0 6-2-2-1.5-3.5 0-6z" fill="#fff3c4"/><path d="M6 24h36c0 9-8 15-18 15S6 33 6 24z" fill="#e8870e"/><path d="M10 24h28" stroke="#ffd98a" stroke-width="2"/></svg><div class="eyebrow">Deepavali 2026</div><h1>Diwali Air<br>and Darshan</h1><p>Air quality in your city, and official temple video links</p></header>
+<main>
+<div class="picker"><label for="city">Choose a city</label>
+<select id="city"><option>Pune - Maharashtra</option><option>Latur - Maharashtra</option><option>Mumbai - Maharashtra / metro</option><option>Nagpur - Maharashtra</option><option>Nashik - Maharashtra</option><option>Thane - Maharashtra</option><option>Solapur - Maharashtra</option><option>Kolhapur - Maharashtra</option><option>Nanded - Maharashtra</option><option>Aurangabad - Maharashtra</option><option>Delhi - Metro</option><option>Kolkata - Metro</option><option>Chennai - Metro</option><option>Bengaluru - Metro</option><option>Hyderabad - Metro</option><option>Ahmedabad - Metro</option><option>Pimpri-Chinchwad - Maharashtra</option><option>Navi Mumbai - Maharashtra</option><option>Kalyan-Dombivli - Maharashtra</option><option>Vasai-Virar - Maharashtra</option><option>Sangli - Maharashtra</option><option>Satara - Maharashtra</option><option>Ahmednagar - Maharashtra</option><option>Jalgaon - Maharashtra</option><option>Dhule - Maharashtra</option><option>Akola - Maharashtra</option><option>Amravati - Maharashtra</option><option>Yavatmal - Maharashtra</option><option>Wardha - Maharashtra</option><option>Chandrapur - Maharashtra</option><option>Parbhani - Maharashtra</option><option>Beed - Maharashtra</option><option>Dharashiv - Maharashtra</option><option>Jalna - Maharashtra</option><option>Ratnagiri - Maharashtra</option><option>Panaji - Goa</option><option>Surat - Gujarat</option><option>Vadodara - Gujarat</option><option>Indore - Madhya Pradesh</option><option>Bhopal - Madhya Pradesh</option><option>Raipur - Chhattisgarh</option><option>Patna - Bihar</option><option>Ranchi - Jharkhand</option><option>Bhubaneswar - Odisha</option><option>Guwahati - Assam</option><option>Chandigarh - Union Territory</option><option>Amritsar - Punjab</option><option>Dehradun - Uttarakhand</option><option>Kochi - Kerala</option><option>Thiruvananthapuram - Kerala</option><option>Coimbatore - Tamil Nadu</option><option>Visakhapatnam - Andhra Pradesh</option><option>Mysuru - Karnataka</option></select>
+<div class="chips" id="chips"></div></div>
+
+<section class="tab on" id="t-air">
+<div class="card"><h2 id="cname">Pune</h2>
+<div class="big" style="color:#1f1d5c" id="aqi">--</div><small>PM2.5 now (model)</small>
+<div><span class="badge">Station data not connected</span> <small id="aqnote">Loading a modelled PM2.5 estimate for this city. No station reading is connected.</small></div>
+<div class="row"><span>PM2.5</span><span id="v-pm25">--</span></div>
+<div class="row"><span>PM10</span><span id="v-pm10">--</span></div>
+<div class="row"><span>Model time</span><span id="v-time">--</span></div><small id="aqmsg" class="src"></small><p class="src">Data: <a href="https://open-meteo.com/en/docs/air-quality-api">Open-Meteo</a> and <a href="https://atmosphere.copernicus.eu/">CAMS</a>. <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Non-commercial test, no ads. Estimates update when you select a city or reload, not continuously.</p>
+<div class="row"><span>Health advice</span><span>See the Safety tab</span></div></div>
+<div class="card"><h2>Stations in this city</h2><small id="stnote"></small><div id="stations"></div></div>
+</section>
+
+<section class="tab" id="t-fest">
+<div class="card"><h2>PM2.5 over time: <span id="ctitle"></span></h2>
+<div id="chartbox"></div><small id="chartnote"></small></div>
+<div class="note"><b>What this will and will not say.</b> It shows a modelled PM2.5 estimate, not what stations measured. It will not say how much came from crackers, because stations do not measure the source. Wind, humidity and construction also change the numbers.</div>
+<div class="card"><h2>Weather context</h2>
+<div class="row"><span>Temperature</span><span>-- (not connected)</span></div>
+<div class="row"><span>Humidity</span><span>-- (not connected)</span></div>
+<div class="row"><span>Wind</span><span>-- (not connected)</span></div>
+<small>Shown only as context. No claim that crackers changed the temperature.</small></div>
+</section>
+
+<section class="tab" id="t-temple">
+<div class="card"><h2>Temple darshan</h2>
+<small>Players load from each temple's official YouTube channel. What plays depends on the channel at that moment. This site does not confirm whether it is live or recorded.</small>
+<div class="chips" id="tchips"></div>
+<div id="player" class="player"><div class="ph">Choose a temple to watch</div></div>
+<div id="pnote"><small></small></div></div>
+</section>
+
+
+<section class="tab" id="t-safe">
+<div class="card"><h2>Precautions by AQI category</h2>
+<small>Uses India's national AQI categories from CPCB (not the US AQI). Pick the category your city's official AQI falls in. This page does not read a live AQI.</small>
+<div class="f2" style="margin-top:10px"><input type="date" id="adate" aria-label="Date of the AQI value"><input type="text" id="asrc" placeholder="Where you read it (e.g. CPCB bulletin)" aria-label="Source of the AQI value"></div>
+<div class="cats" id="cats"><button class="cat" data-i="0"><span class="sw" style="background:#2e8b3d"></span>Good<small>0-50</small></button><button class="cat" data-i="1"><span class="sw" style="background:#a6c43a"></span>Satisfactory<small>51-100</small></button><button class="cat" data-i="2"><span class="sw" style="background:#f2c200"></span>Moderate<small>101-200</small></button><button class="cat" data-i="3"><span class="sw" style="background:#f08a00"></span>Poor<small>201-300</small></button><button class="cat" data-i="4"><span class="sw" style="background:#d9381e"></span>Very Poor<small>301-400</small></button><button class="cat" data-i="5"><span class="sw" style="background:#8a1538"></span>Severe<small>401-500</small></button></div>
+<div id="advout"></div></div>
+<div class="card" id="aicard"><h2>Explain simply (optional AI)</h2>
+<div class="lbl"><b>Experimental, answer generation not yet verified.</b> A small AI model attempts to run on your phone and rewrites one sourced advice card in simpler words. It is not official advice and can be wrong. The original sourced card is always shown first. The advice text is processed on your device. The site fetches city estimates and embeds YouTube players; those services receive ordinary connection details. Also, the first use downloads about 200 MB from third-party hosts (the model files and code library), so use Wi-Fi.</div>
+<label for="aitopic" class="src">Choose a card</label>
+<select id="aitopic" style="width:100%;padding:12px;font-size:16px;border:1.5px solid var(--line);border-radius:12px;background:#fff;margin:6px 0 10px"></select>
+<button id="aibtn" class="chip" style="width:100%;padding:12px;border-radius:12px" type="button">Download model and explain</button>
+<div id="aistat" class="src" role="status" aria-live="polite" style="margin-top:8px"></div><div id="aiout"></div></div>
+<div class="card"><h2>Find guidance</h2><label for="q" class="src">Type a word such as eyes, children, asthma, burn, clothes. This searches the sourced advice on this page. It is a plain keyword search, not an AI, and it gives no advice of its own.</label><input id="q" type="search" placeholder="Search precautions" style="width:100%;padding:12px;font-size:16px;border:1.5px solid var(--line);border-radius:12px;margin-top:8px"><div id="qout"></div></div><div class="card"><h2>Crackers: burn and fire safety</h2>
+<div class="lbl">This is safety information only. It does not say crackers are allowed or safe, and gives no safe number to burst. Check local rules and orders for your city first.</div>
+<div class="adv"><svg viewBox="0 0 52 52" role="img" aria-hidden="true"><rect width="52" height="52" rx="12" fill="#fff4dc" stroke="#1f1d5c" stroke-width="1.5"/><circle cx="17" cy="28" r="8" fill="#cfe6ff" stroke="#1f1d5c" stroke-width="3"/><circle cx="36" cy="28" r="8" fill="#cfe6ff" stroke="#1f1d5c" stroke-width="3"/><path d="M25 28h3M9 26l-3-6M44 26l3-6" stroke="#1f1d5c" stroke-width="3" stroke-linecap="round"/></svg><div><b>Protect eyes</b>Wear protective eyeglasses when lighting or closely watching fireworks.<div class="src">Source: MoHFW DGHS 2026 guidelines.</div></div></div><div class="adv"><svg viewBox="0 0 52 52" role="img" aria-hidden="true"><rect width="52" height="52" rx="12" fill="#e6f4ff" stroke="#1f1d5c" stroke-width="1.5"/><path d="M12 18h28l-4 24H16z" fill="#7cc4ff" stroke="#1f1d5c" stroke-width="3" stroke-linejoin="round"/><path d="M12 18c4-8 24-8 28 0" fill="none" stroke="#1f1d5c" stroke-width="3"/><path d="M17 27c3 3 5-3 9 0s6-3 9 0" stroke="#fff" stroke-width="2.5" fill="none"/></svg><div><b>Keep water or sand ready</b>Keep a bucket of water or sand nearby. Put used fireworks into water or dry sand.<div class="src">Sources: MoHFW DGHS 2026; Maharashtra Fire and Emergency Services.</div></div></div><div class="adv"><svg viewBox="0 0 52 52" role="img" aria-hidden="true"><rect width="52" height="52" rx="12" fill="#fff4dc" stroke="#1f1d5c" stroke-width="1.5"/><path d="M8 34h34a3 3 0 013 3v3H8z" fill="#1f1d5c"/><path d="M10 34V16h9l3 8 12 4c6 1 9 3 9 6" fill="#e8870e" stroke="#1f1d5c" stroke-width="2.5" stroke-linejoin="round"/></svg><div><b>Closed footwear</b>Wear closed footwear, especially around ground chakris.<div class="src">Source: MoHFW DGHS 2026.</div></div></div><div class="adv"><svg viewBox="0 0 52 52" role="img" aria-hidden="true"><rect width="52" height="52" rx="12" fill="#fff4dc" stroke="#1f1d5c" stroke-width="1.5"/><path d="M16 10l-8 8 6 5 3-3v22h18V20l3 3 6-5-8-8c-2 4-5 6-10 6s-8-2-10-6z" fill="#cfd8ff" stroke="#1f1d5c" stroke-width="2.5" stroke-linejoin="round"/></svg><div><b>Clothing</b>Tie loose dupatta or chunni snugly. Avoid loose, flowing or synthetic clothes. Wear tight cotton clothes.<div class="src">Sources: MoHFW DGHS 2026; Maharashtra Fire Services.</div></div></div><div class="adv"><svg viewBox="0 0 52 52" role="img" aria-hidden="true"><rect width="52" height="52" rx="12" fill="#fff4dc" stroke="#1f1d5c" stroke-width="1.5"/><circle cx="17" cy="14" r="5" fill="#1f1d5c"/><path d="M10 40V26a7 7 0 0114 0v14z" fill="#1f1d5c"/><circle cx="36" cy="26" r="4" fill="#e8870e"/><path d="M31 40v-6a5 5 0 0110 0v6z" fill="#e8870e"/><path d="M24 30h7" stroke="#1d1b3a" stroke-width="2.5"/></svg><div><b>Children only with adults</b>Only adults light fireworks, or children under close adult supervision.<div class="src">Sources: MoHFW DGHS 2026; Maharashtra Fire Services.</div></div></div><div class="adv"><svg viewBox="0 0 52 52" role="img" aria-hidden="true"><rect width="52" height="52" rx="12" fill="#fff4dc" stroke="#1f1d5c" stroke-width="1.5"/><path d="M26 8c4 8 8 11 0 20-8-9-4-12 0-20z" fill="#e8870e" stroke="#1d1b3a" stroke-width="2"/><path d="M12 38h28" stroke="#1f1d5c" stroke-width="3.5" stroke-linecap="round"/><text x="26" y="35" font-size="11" font-weight="700" text-anchor="middle" fill="#1d1b3a" font-family="Arial">1</text></svg><div><b>One at a time, from a distance</b>Light one firework at a time. Use a long candle or phooljhari to light, and keep your arm straight.<div class="src">Source: MoHFW DGHS 2026.</div></div></div><div class="adv"><svg viewBox="0 0 52 52" role="img" aria-hidden="true"><rect width="52" height="52" rx="12" fill="#ffe9ef" stroke="#1f1d5c" stroke-width="1.5"/><rect x="13" y="22" width="22" height="18" rx="5" fill="#ffd9a0" stroke="#1d1b3a" stroke-width="2.5"/><circle cx="38" cy="14" r="9" fill="#fff" stroke="#b4235a" stroke-width="3.5"/><path d="M32 20l12-12" stroke="#b4235a" stroke-width="3.5"/></svg><div><b>Never hold or relight</b>Do not hold an anar or bomb in the hand. Do not relight one that failed. Do not put crackers in a container.<div class="src">Sources: MoHFW DGHS 2026; Maharashtra Fire Services.</div></div></div><div class="adv"><svg viewBox="0 0 52 52" role="img" aria-hidden="true"><rect width="52" height="52" rx="12" fill="#e6f4ff" stroke="#1f1d5c" stroke-width="1.5"/><path d="M26 8C18 20 14 25 14 31a12 12 0 0024 0c0-6-4-11-12-23z" fill="#4aa8ff" stroke="#1f1d5c" stroke-width="3"/><path d="M20 33a6 6 0 006 6" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg><div><b>If someone is burnt</b>Move them away from the source, put out any flames on clothing, then cool the burn with clean running water and get medical help. Eye injuries need medical care.<div class="src">Sources: MoHFW DGHS 2026 (first aid chapter); Maharashtra Fire Services.</div></div></div><div class="adv"><svg viewBox="0 0 52 52" role="img" aria-hidden="true"><rect width="52" height="52" rx="12" fill="#ffe9e9" stroke="#1f1d5c" stroke-width="1.5"/><path d="M14 40v-12a12 12 0 0124 0v12z" fill="#e23c3c" stroke="#1d1b3a" stroke-width="3"/><rect x="10" y="40" width="32" height="5" rx="2" fill="#1d1b3a"/><path d="M26 6v6M10 12l4 4M42 12l-4 4" stroke="#1d1b3a" stroke-width="3" stroke-linecap="round"/></svg><div><b>Fire emergency</b>In case of fire, dial 101 (fire service). For a serious injury, get professional medical help at once.<div class="src">Source: NIDM, Dos and Don'ts for Hazards (fire).</div></div></div></div>
+<div class="card"><h2>Sources</h2><ul class="src">
+<li>CPCB AQI categories and possible health impacts: <a href="https://airquality.cpcb.gov.in/AQI/">airquality.cpcb.gov.in/AQI</a></li>
+<li>MoHFW NPCCHH, Health Advisory on Air Pollution (Sept 2022): <a href="https://ncdc.mohfw.gov.in/uploads/pdf/air4.pdf">ncdc.mohfw.gov.in</a></li>
+<li>MoHFW DGHS, Guidelines for Safe Handling and Use of Firecrackers in India (2026): <a href="https://dghs.mohfw.gov.in/uploads/assets/cocrHyjl08iBKHAlwErjfhovlRd9AP2Exy8dc3lc.pdf">dghs.mohfw.gov.in</a></li>
+<li>Maharashtra Fire and Emergency Services, Fireworks Safety: <a href="https://mahafireservice.gov.in/fireworks.php">mahafireservice.gov.in</a></li>
+<li>NIDM, Dos and Don'ts for Hazards: <a href="https://nidm.mha.gov.in/PDF/IEC/Dosnewnidm.pdf">nidm.mha.gov.in</a></li></ul>
+<small>General information, not medical advice. If you feel unwell, see a doctor. Icons are drawn for this page.</small></div>
+</section>
+<section class="tab" id="t-about">
+<div class="card"><h2>Bursting and air quality</h2>
+<ul><li>Check your city's and state's rules on firecrackers first. Many places restrict them or ban them.</li>
+<li>When the AQI category is poor, children, older people and people with breathing problems should stay indoors.</li>
+<li>This site does not give a "safe number" of crackers. No data source supports one.</li></ul></div>
+<div class="card"><h2>About this site</h2>
+<ul><li>Cities: Pune and Latur first, then other Maharashtra cities and the big metros.</li>
+<li>Station names come from the CPCB list of continuous monitoring stations. Listed does not mean reporting today.</li>
+<li>Air values shown are modelled PM2.5 and PM10 estimates from Open-Meteo (CAMS global model, about 45 km grid, CC BY 4.0, non-commercial use). They are not CPCB station readings and not the Indian AQI, and can differ a lot from what a station measures.</li>
+<li>Festival dates for 2026 per calendar sources: Dhanteras 6 Nov, Lakshmi Puja 8 Nov, Bhai Dooj 11 Nov.</li></ul></div>
+</section>
+<div class="foot">Station readings and the Indian AQI are not connected. Air values are model estimates. Advice is general information, not medical advice. Source links are in the Safety tab.</div></main>
+<nav>
+<a class="on" data-t="air" href="#t-air">Air</a><a data-t="fest" href="#t-fest">Festival</a><a data-t="temple" href="#t-temple">Temples</a><a data-t="safe" href="#t-safe">Safety</a><a data-t="about" href="#t-about">About</a></nav>
+<script>
+var cities=[
+["Pune","Maharashtra",["Alandi (IITM)","Bhosari (IITM)","Bhumkar Nagar (IITM)","Dhankawadi (IITM)","Hadapsar (IITM)","Karve Road (MPCB)","Katraj Dairy (MPCB)","MIT-Kothrud (IITM)","Mhada Colony (IITM)","Panchawati-Pashan (IITM)","Revenue Colony-Shivajinagar (IITM)","Savitribai Phule Pune University (MPCB)","Transport Nagar-Nigdi (IITM)"]],
+["Latur","Maharashtra",["Sawe Wadi (MPCB)"]],
+["Mumbai","Maharashtra / metro",null],["Nagpur","Maharashtra",null],["Nashik","Maharashtra",null],["Thane","Maharashtra",null],
+["Solapur","Maharashtra",null],["Kolhapur","Maharashtra",null],["Nanded","Maharashtra",null],["Aurangabad","Maharashtra",null],["Delhi","Metro",null],["Kolkata","Metro",null],["Chennai","Metro",null],["Bengaluru","Metro",null],["Hyderabad","Metro",null],["Ahmedabad","Metro",null],["Jaipur","Metro and major city",null],["Lucknow","Major city",null],["Varanasi","Major city",null],["Pimpri-Chinchwad","Maharashtra",null],["Navi Mumbai","Maharashtra",null],["Kalyan-Dombivli","Maharashtra",null],["Vasai-Virar","Maharashtra",null],["Sangli","Maharashtra",null],["Satara","Maharashtra",null],["Ahmednagar","Maharashtra",null],["Jalgaon","Maharashtra",null],["Dhule","Maharashtra",null],["Akola","Maharashtra",null],["Amravati","Maharashtra",null],["Yavatmal","Maharashtra",null],["Wardha","Maharashtra",null],["Chandrapur","Maharashtra",null],["Parbhani","Maharashtra",null],["Beed","Maharashtra",null],["Dharashiv","Maharashtra",null],["Jalna","Maharashtra",null],["Ratnagiri","Maharashtra",null],["Panaji","Goa",null],["Surat","Gujarat",null],["Vadodara","Gujarat",null],["Indore","Madhya Pradesh",null],["Bhopal","Madhya Pradesh",null],["Raipur","Chhattisgarh",null],["Patna","Bihar",null],["Ranchi","Jharkhand",null],["Bhubaneswar","Odisha",null],["Guwahati","Assam",null],["Chandigarh","Union Territory",null],["Amritsar","Punjab",null],["Dehradun","Uttarakhand",null],["Kochi","Kerala",null],["Thiruvananthapuram","Kerala",null],["Coimbatore","Tamil Nadu",null],["Visakhapatnam","Andhra Pradesh",null],["Mysuru","Karnataka",null]];
+
+/* Readings format once a source is connected: READINGS[cityName] = [{t:"2026-11-08T21:00:00+05:30", pm25:123.4}, ...]
+   Missing hours are simply absent. The chart breaks the line at gaps and never fills them in. */
+var READINGS=window.READINGS||{};
+var GAP_MS=3*3600*1000;
+function drawChart(name){
+ var box=document.getElementById('chartbox'),note=document.getElementById('chartnote');
+ var d=(READINGS[name]||[]).slice().sort(function(a,b){return new Date(a.t)-new Date(b.t)});
+ if(!d.length){box.innerHTML='<div class="chart">No modelled data loaded for '+name+'.<br>The PM2.5 line chart will appear here when the estimate loads.</div>';note.textContent='';return}
+ var W=340,H=170,p=30,t0=new Date(d[0].t).getTime(),t1=new Date(d[d.length-1].t).getTime(),mx=Math.max.apply(null,d.map(function(r){return r.pm25}))*1.1||1;
+ function X(t){return p+(t-t0)/Math.max(1,t1-t0)*(W-p-8)}function Y(v){return H-p-(v/mx)*(H-p-10)}
+ var path='',prev=null;d.forEach(function(r){var t=new Date(r.t).getTime();path+=(prev===null||t-prev>GAP_MS?'M':'L')+X(t).toFixed(1)+' '+Y(r.pm25).toFixed(1)+' ';prev=t});
+ var dots=d.map(function(r){return '<circle cx="'+X(new Date(r.t).getTime()).toFixed(1)+'" cy="'+Y(r.pm25).toFixed(1)+'" r="2.5" fill="#d9531e"/>'}).join('');
+ box.innerHTML='<svg viewBox="0 0 '+W+' '+H+'" width="100%" role="img" aria-label="PM2.5 over time for '+name+'"><line x1="'+p+'" y1="'+(H-p)+'" x2="'+(W-8)+'" y2="'+(H-p)+'" stroke="#cdbb9f"/><line x1="'+p+'" y1="10" x2="'+p+'" y2="'+(H-p)+'" stroke="#cdbb9f"/><text x="2" y="14" font-size="10" fill="#7a6552">ug/m3</text><text x="'+p+'" y="'+(H-10)+'" font-size="10" fill="#7a6552">'+new Date(t0).toLocaleDateString()+'</text><text x="'+(W-60)+'" y="'+(H-10)+'" font-size="10" fill="#7a6552">'+new Date(t1).toLocaleDateString()+'</text><path d="'+path+'" fill="none" stroke="#d9531e" stroke-width="2"/>'+dots+'</svg>';
+ note.textContent='Modelled PM2.5, last 3 days to the current model hour. Not station data. Line breaks where values are missing for more than 3 hours.';}
+
+var TEMPLES=[{"n": "Kashi Vishwanath", "c": "Varanasi", "id": "UCdMj2twWfMHXrWgX5oVdoyA", "src": "https://www.youtube.com/@ShreeKashiVishwanathMandir"}, {"n": "Siddhivinayak", "c": "Mumbai", "id": "UCF9FdiMBENIbM6jb44zWmCQ", "na": 1, "src": "https://www.youtube.com/@ShreeSiddhivinayakTemple"}, {"n": "Dagdusheth Halwai Ganpati", "c": "Pune", "id": "UCFUYpQptYcTT_IKWf2GlESg", "src": "https://www.youtube.com/c/dagdushethganpati"}, {"n": "Shirdi Sai Baba", "c": "Shirdi", "id": "UCKGvJDh7g_Kzocbwy7aKicA", "na": 1, "src": "https://www.youtube.com/user/saibabasansthantrust"}];
+var tch=document.getElementById('tchips');
+TEMPLES.forEach(function(t,i){var b=document.createElement('button');b.className='chip';b.textContent=t.n+(t.na?' (unavailable when checked)':'');b.onclick=function(){if(t.na){Array.prototype.forEach.call(tch.children,function(x){x.classList.remove('on')});b.classList.add('on');document.getElementById('player').innerHTML='<div class="ph">YouTube reported no playable video for this channel when checked on 3 Nov 2026. This may change.</div>';document.getElementById('pnote').innerHTML='<small>'+t.n+', '+t.c+'. Not playable when checked.</small>';return}
+ Array.prototype.forEach.call(tch.children,function(x){x.classList.remove('on')});b.classList.add('on');
+ if(location.protocol==='file:'){document.getElementById('player').innerHTML='<div class="ph">Video needs the site to be opened from a web address. It cannot play from a file on your phone.</div>';document.getElementById('pnote').innerHTML='<small>'+t.n+', '+t.c+'.</small>';return}document.getElementById('player').innerHTML='<iframe src="https://www.youtube.com/embed/live_stream?channel='+t.id+'&rel=0" title="'+t.n+' live darshan" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>';
+ document.getElementById('pnote').innerHTML='<small>'+t.n+', '+t.c+'. Player from the temple\'s official YouTube channel. Live or recorded is not verified here.</small>'};tch.appendChild(b)});
+
+var COORDS={"Pune": [18.51957, 73.85535], "Latur": [18.39721, 76.56784], "Mumbai": [19.07283, 72.88261], "Nagpur": [21.14631, 79.08491], "Nashik": [19.99727, 73.79096], "Thane": [19.19704, 72.96355], "Solapur": [17.67152, 75.91044], "Kolhapur": [16.69563, 74.23167], "Nanded": [19.16023, 77.31497], "Aurangabad": [19.87757, 75.34226], "Delhi": [28.65195, 77.23149], "Kolkata": [22.56263, 88.36304], "Chennai": [13.08784, 80.27847], "Bengaluru": [12.97194, 77.59369], "Hyderabad": [17.38405, 78.45636], "Ahmedabad": [23.02579, 72.58727], "Jaipur": [26.91962, 75.78781], "Lucknow": [26.83928, 80.92313], "Varanasi": [25.31668, 83.01041], "Pimpri-Chinchwad": [18.61867, 73.80375], "Navi Mumbai": [19.03681, 73.01582], "Kalyan-Dombivli": [19.21667, 73.08333], "Vasai-Virar": [19.39, 72.84], "Sangli": [16.85438, 74.56417], "Satara": [17.68589, 73.99333], "Ahmednagar": [19.09, 74.74], "Jalgaon": [21.00292, 75.56602], "Dhule": [20.9013, 74.77737], "Akola": [20.70957, 76.9981], "Amravati": [20.93333, 77.75], "Yavatmal": [20.39324, 78.13201], "Wardha": [20.73933, 78.59784], "Chandrapur": [19.95076, 79.29523], "Parbhani": [19.26855, 76.77081], "Beed": [18.98921, 75.75634], "Dharashiv": [18.18158, 76.03889], "Jalna": [19.84102, 75.88636], "Ratnagiri": [16.99154, 73.31022], "Panaji": [15.49, 73.83], "Surat": [21.19594, 72.83023], "Vadodara": [22.29941, 73.20812], "Indore": [22.72329, 75.86995], "Bhopal": [23.25469, 77.40289], "Raipur": [21.23333, 81.63333], "Patna": [25.59408, 85.13563], "Ranchi": [23.34316, 85.3094], "Bhubaneswar": [20.27241, 85.83385], "Guwahati": [26.1844, 91.7458], "Chandigarh": [30.72778, 76.77778], "Amritsar": [31.62234, 74.87534], "Dehradun": [30.32443, 78.03392], "Kochi": [9.93988, 76.26022], "Thiruvananthapuram": [8.4855, 76.94924], "Coimbatore": [11.00555, 76.96612], "Visakhapatnam": [17.68009, 83.20161], "Mysuru": [12.29791, 76.63925]};var MODELREQ=0;
+function fmt(x){return x==null?'--':(Math.round(x*10)/10)}
+function loadModel(name){var ll=COORDS[name],req=++MODELREQ;var b=document.querySelector('#t-air .badge'),rows=document.querySelectorAll('#t-air .row');
+if(!ll){return}
+document.getElementById('aqi').textContent='--';document.getElementById('v-pm25').textContent='--';document.getElementById('v-pm10').textContent='--';document.getElementById('v-time').textContent='--';b.textContent='Loading model estimate';document.getElementById('aqmsg').textContent='Loading modelled estimate...';
+var u='https://air-quality-api.open-meteo.com/v1/air-quality?latitude='+ll[0]+'&longitude='+ll[1]+'&current=pm2_5,pm10&hourly=pm2_5&past_days=3&forecast_days=1&timezone=Asia%2FKolkata';
+fetch(u,{signal:AbortSignal.timeout(20000)}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(function(d){if(req!==MODELREQ)return;
+var cur=d.current||{};if(!cur.time||!Number.isFinite(cur.pm2_5)||!Number.isFinite(cur.pm10))throw new Error('Missing model data');if(Math.abs(Date.now()-new Date(cur.time+':00+05:30').getTime())>6*3600000)throw new Error('Stale model hour');var pts=[];(d.hourly.time||[]).forEach(function(t,i){var v=d.hourly.pm2_5[i];if(v!=null&&t<=cur.time)pts.push({t:t+':00+05:30',pm25:v})});
+READINGS[name]=pts;drawChart(name);
+b.textContent='Modelled estimate';b.style.background='#eaf0ff';b.style.color='#1f1d5c';
+document.getElementById('aqi').textContent=cur.pm2_5!=null?fmt(cur.pm2_5):'--';
+document.getElementById('aqnote').textContent='PM2.5 in \u00b5g/m\u00b3 from a computer model, not a station reading and not the Indian AQI.';
+document.getElementById('v-pm25').textContent=fmt(cur.pm2_5)+' \u00b5g/m\u00b3 (model)';document.getElementById('v-pm10').textContent=fmt(cur.pm10)+' \u00b5g/m\u00b3 (model)';
+document.getElementById('v-time').textContent=(cur.time||'--').replace('T',' ')+' IST (model hour)';
+document.getElementById('aqmsg').textContent='Source: Open-Meteo (CAMS global atmospheric model, about 45 km grid, 3-hourly, forecast not measurement). CC BY 4.0, non-commercial use.'
+}).catch(function(e){if(req!==MODELREQ)return;READINGS[name]=[];drawChart(name);b.textContent='Data not available';b.style.background='#f1ead8';b.style.color='#7a4a00';
+document.getElementById('aqi').textContent='--';document.getElementById('aqnote').textContent='The modelled estimate could not be loaded right now.';
+document.getElementById('v-pm25').textContent='-- (not available)';document.getElementById('v-pm10').textContent='-- (not available)';document.getElementById('v-time').textContent='--';document.getElementById('aqmsg').textContent=''})}
+var sel=document.getElementById('city'),chips=document.getElementById('chips');
+sel.innerHTML='';var grp={};['Maharashtra','Metros','Other states'].forEach(function(g){var og=document.createElement('optgroup');og.label=g;grp[g]=og;sel.appendChild(og)});
+cities.forEach(function(c,i){var o=document.createElement('option');o.value=i;o.textContent=c[0]+" - "+c[1];var g=c[1].indexOf('Maharashtra')===0?'Maharashtra':(c[1]==='Metro'?'Metros':'Other states');grp[g].appendChild(o)});
+["Pune","Latur"].forEach(function(n){var b=document.createElement('button');b.className='chip';b.textContent=n;b.onclick=function(){pick(cities.findIndex(function(c){return c[0]==n}))};chips.appendChild(b)});
+function pick(i){sel.value=i;var c=cities[i];drawChart(c[0]);loadModel(c[0]);document.getElementById('ctitle').textContent=c[0];document.getElementById('cname').textContent=c[0];
+var s=document.getElementById('stations'),n=document.getElementById('stnote');
+if(c[2]){n.textContent="Listed by CPCB as continuous stations. Whether each one is reporting is not checked.";s.innerHTML=c[2].map(function(x){return '<div class="row"><span>'+x+'</span><span>status unknown</span></div>'}).join('')}
+else{n.textContent="Stations for this city are not listed yet.";s.innerHTML=''}
+Array.prototype.forEach.call(chips.children,function(b){b.classList.toggle('on',b.textContent==c[0])})}
+sel.onchange=function(){pick(+sel.value)};
+document.querySelectorAll('nav a').forEach(function(b){b.onclick=function(e){e.preventDefault();
+document.querySelectorAll('nav a,.tab').forEach(function(e){e.classList.remove('on')});
+b.classList.add('on');document.getElementById('t-'+b.dataset.t).classList.add('on');window.scrollTo(0,0)}});
+
+var CATS=[{"n": "Good", "r": "0-50", "col": "#2e8b3d", "h": "Low risk.", "g": "No special precautions.", "v": "No special precautions.", "gi": "<svg viewBox=\"0 0 52 52\" role=\"img\" aria-hidden=\"true\"><rect width=\"52\" height=\"52\" rx=\"12\" fill=\"#e5f6e8\" stroke=\"#1f1d5c\" stroke-width=\"1.5\"/><path d=\"M12 40C12 20 24 10 42 10c0 18-10 30-26 30\" fill=\"#2e8b3d\" stroke=\"#1d1b3a\" stroke-width=\"2\"/><path d=\"M12 40L30 22\" stroke=\"#fff\" stroke-width=\"2.5\"/></svg>", "vi": "<svg viewBox=\"0 0 52 52\" role=\"img\" aria-hidden=\"true\"><rect width=\"52\" height=\"52\" rx=\"12\" fill=\"#e5f6e8\" stroke=\"#1f1d5c\" stroke-width=\"1.5\"/><path d=\"M12 40C12 20 24 10 42 10c0 18-10 30-26 30\" fill=\"#2e8b3d\" stroke=\"#1d1b3a\" stroke-width=\"2\"/><path d=\"M12 40L30 22\" stroke=\"#fff\" stroke-width=\"2.5\"/></svg>"}, {"n": "Satisfactory", "r": "51-100", "col": "#a6c43a", "h": "Minor breathing discomfort in the vulnerable population.", "g": "No special precautions.", "v": "Do less prolonged or strenuous outdoor physical exertion.", "gi": "<svg viewBox=\"0 0 52 52\" role=\"img\" aria-hidden=\"true\"><rect width=\"52\" height=\"52\" rx=\"12\" fill=\"#e5f6e8\" stroke=\"#1f1d5c\" stroke-width=\"1.5\"/><path d=\"M12 40C12 20 24 10 42 10c0 18-10 30-26 30\" fill=\"#2e8b3d\" stroke=\"#1d1b3a\" stroke-width=\"2\"/><path d=\"M12 40L30 22\" stroke=\"#fff\" stroke-width=\"2.5\"/></svg>", "vi": "<svg viewBox=\"0 0 52 52\" role=\"img\" aria-hidden=\"true\"><rect width=\"52\" height=\"52\" rx=\"12\" fill=\"#fff4dc\" stroke=\"#1f1d5c\" stroke-width=\"1.5\"/><circle cx=\"27\" cy=\"13\" r=\"5\" fill=\"#1f1d5c\"/><path d=\"M27 19v12M27 23l-8 5M27 23l8 4M27 31l-7 12M27 31l8 12\" stroke=\"#1f1d5c\" stroke-width=\"3.5\" fill=\"none\" stroke-linecap=\"round\"/></svg>"}, {"n": "Moderate", "r": "101-200", "col": "#f2c200", "h": "Breathing or other health-related discomfort in the vulnerable population.", "g": "Do less prolonged or strenuous outdoor physical exertion.", "v": "Avoid prolonged or strenuous outdoor physical exertion.", "gi": "<svg viewBox=\"0 0 52 52\" role=\"img\" aria-hidden=\"true\"><rect width=\"52\" height=\"52\" rx=\"12\" fill=\"#fff4dc\" stroke=\"#1f1d5c\" stroke-width=\"1.5\"/><circle cx=\"27\" cy=\"13\" r=\"5\" fill=\"#1f1d5c\"/><path d=\"M27 19v12M27 23l-8 5M27 23l8 4M27 31l-7 12M27 31l8 12\" stroke=\"#1f1d5c\" stroke-width=\"3.5\" fill=\"none\" stroke-linecap=\"round\"/></svg>", "vi": "<svg viewBox=\"0 0 52 52\" role=\"img\" aria-hidden=\"true\"><rect width=\"52\" height=\"52\" rx=\"12\" fill=\"#f3e8ff\" stroke=\"#1f1d5c\" stroke-width=\"1.5\"/><circle cx=\"18\" cy=\"16\" r=\"5\" fill=\"#1f1d5c\"/><path d=\"M10 40v-9a8 8 0 0116 0v9z\" fill=\"#1f1d5c\"/><circle cx=\"36\" cy=\"22\" r=\"4\" fill=\"#b4235a\"/><path d=\"M30 40v-7a6 6 0 0112 0v7z\" fill=\"#b4235a\"/></svg>"}, {"n": "Poor", "r": "201-300", "col": "#f08a00", "h": "Breathing discomfort in healthy people on prolonged exposure. Vulnerable people can feel discomfort on short exposure.", "g": "Avoid outdoor physical exertion.", "v": "Avoid outdoor physical activities.", "gi": "<svg viewBox=\"0 0 52 52\" role=\"img\" aria-hidden=\"true\"><rect width=\"52\" height=\"52\" rx=\"12\" fill=\"#fff4dc\" stroke=\"#1f1d5c\" stroke-width=\"1.5\"/><circle cx=\"27\" cy=\"13\" r=\"5\" fill=\"#1f1d5c\"/><path d=\"M27 19v12M27 23l-8 5M27 23l8 4M27 31l-7 12M27 31l8 12\" stroke=\"#1f1d5c\" stroke-width=\"3.5\" fill=\"none\" stroke-linecap=\"round\"/></svg>", "vi": "<svg viewBox=\"0 0 52 52\" role=\"img\" aria-hidden=\"true\"><rect width=\"52\" height=\"52\" rx=\"12\" fill=\"#f3e8ff\" stroke=\"#1f1d5c\" stroke-width=\"1.5\"/><circle cx=\"18\" cy=\"16\" r=\"5\" fill=\"#1f1d5c\"/><path d=\"M10 40v-9a8 8 0 0116 0v9z\" fill=\"#1f1d5c\"/><circle cx=\"36\" cy=\"22\" r=\"4\" fill=\"#b4235a\"/><path d=\"M30 40v-7a6 6 0 0112 0v7z\" fill=\"#b4235a\"/></svg>"}, {"n": "Very Poor", "r": "301-400", "col": "#d9381e", "h": "Respiratory illness in healthy people on prolonged exposure. Pronounced illness in the vulnerable population on short exposure.", "g": "Avoid outdoor physical activities, especially in the morning and late evening hours.", "v": "Remain indoors and keep activity levels low.", "gi": "<svg viewBox=\"0 0 52 52\" role=\"img\" aria-hidden=\"true\"><rect width=\"52\" height=\"52\" rx=\"12\" fill=\"#fff4dc\" stroke=\"#1f1d5c\" stroke-width=\"1.5\"/><circle cx=\"27\" cy=\"13\" r=\"5\" fill=\"#1f1d5c\"/><path d=\"M27 19v12M27 23l-8 5M27 23l8 4M27 31l-7 12M27 31l8 12\" stroke=\"#1f1d5c\" stroke-width=\"3.5\" fill=\"none\" stroke-linecap=\"round\"/></svg>", "vi": "<svg viewBox=\"0 0 52 52\" role=\"img\" aria-hidden=\"true\"><rect width=\"52\" height=\"52\" rx=\"12\" fill=\"#e6efff\" stroke=\"#1f1d5c\" stroke-width=\"1.5\"/><path d=\"M10 27L26 12l16 15\" stroke=\"#1f1d5c\" stroke-width=\"3.5\" fill=\"none\" stroke-linejoin=\"round\"/><path d=\"M15 25v17h22V25\" fill=\"#ffd9a0\" stroke=\"#1f1d5c\" stroke-width=\"3\"/><rect x=\"23\" y=\"32\" width=\"7\" height=\"10\" fill=\"#1f1d5c\"/></svg>"}, {"n": "Severe", "r": "401-500", "col": "#8a1538", "h": "Respiratory illness in healthy people on prolonged exposure. Serious illness in the vulnerable population on short exposure.", "g": "Avoid outdoor physical activities.", "v": "Remain indoors and keep activity levels low.", "gi": "<svg viewBox=\"0 0 52 52\" role=\"img\" aria-hidden=\"true\"><rect width=\"52\" height=\"52\" rx=\"12\" fill=\"#fff4dc\" stroke=\"#1f1d5c\" stroke-width=\"1.5\"/><circle cx=\"27\" cy=\"13\" r=\"5\" fill=\"#1f1d5c\"/><path d=\"M27 19v12M27 23l-8 5M27 23l8 4M27 31l-7 12M27 31l8 12\" stroke=\"#1f1d5c\" stroke-width=\"3.5\" fill=\"none\" stroke-linecap=\"round\"/></svg>", "vi": "<svg viewBox=\"0 0 52 52\" role=\"img\" aria-hidden=\"true\"><rect width=\"52\" height=\"52\" rx=\"12\" fill=\"#e6efff\" stroke=\"#1f1d5c\" stroke-width=\"1.5\"/><path d=\"M10 27L26 12l16 15\" stroke=\"#1f1d5c\" stroke-width=\"3.5\" fill=\"none\" stroke-linejoin=\"round\"/><path d=\"M15 25v17h22V25\" fill=\"#ffd9a0\" stroke=\"#1f1d5c\" stroke-width=\"3\"/><rect x=\"23\" y=\"32\" width=\"7\" height=\"10\" fill=\"#1f1d5c\"/></svg>"}];var GENERAL="<div class=\"adv\"><svg viewBox=\"0 0 52 52\" role=\"img\" aria-hidden=\"true\"><rect width=\"52\" height=\"52\" rx=\"12\" fill=\"#fff4dc\" stroke=\"#1f1d5c\" stroke-width=\"1.5\"/><circle cx=\"27\" cy=\"13\" r=\"5\" fill=\"#1f1d5c\"/><path d=\"M27 19v12M27 23l-8 5M27 23l8 4M27 31l-7 12M27 31l8 12\" stroke=\"#1f1d5c\" stroke-width=\"3.5\" fill=\"none\" stroke-linecap=\"round\"/></svg><div><b>General (no valid AQI selected)</b>Check the official AQI category for your city before outdoor activity. Children, older people, pregnant women, people with heart, lung or brain-circulation conditions, and outdoor workers are the groups the health ministry flags as more vulnerable.<div class=\"src\">Source: MoHFW NPCCHH Health Advisory on Air Pollution (Sept 2022).</div></div></div><div class=\"adv\"><svg viewBox=\"0 0 52 52\" role=\"img\" aria-hidden=\"true\"><rect width=\"52\" height=\"52\" rx=\"12\" fill=\"#e6efff\" stroke=\"#1f1d5c\" stroke-width=\"1.5\"/><path d=\"M10 27L26 12l16 15\" stroke=\"#1f1d5c\" stroke-width=\"3.5\" fill=\"none\" stroke-linejoin=\"round\"/><path d=\"M15 25v17h22V25\" fill=\"#ffd9a0\" stroke=\"#1f1d5c\" stroke-width=\"3\"/><rect x=\"23\" y=\"32\" width=\"7\" height=\"10\" fill=\"#1f1d5c\"/></svg><div><b>If you have asthma or another breathing illness</b>The firecracker safety guidelines say people with asthma or other respiratory illness should stay indoors, and not to inhale the smoke directly.<div class=\"src\">Source: MoHFW DGHS, Guidelines for Safe Handling and Use of Firecrackers in India (2026).</div></div></div>";
+var selI=-1;
+function renderAdv(){var o=document.getElementById('advout'),d=document.getElementById('adate').value,sr=document.getElementById('asrc').value.trim();
+Array.prototype.forEach.call(document.querySelectorAll('.cat'),function(b){b.classList.toggle('on',+b.dataset.i===selI)});
+var ok=false,age=null;if(d){age=(Date.now()-new Date(d+'T23:59:59+05:30').getTime())/864e5;ok=age<=1.5&&age>=-1}
+if(selI<0||!d||!sr||!ok){var why=selI<0?'No AQI category selected.':(!d||!sr)?'Add the date and source of the AQI value to see category advice.':'The date is more than a day old, or in the future, so it is treated as not current.';
+o.innerHTML='<div class="lbl"><b>General guidance only.</b> '+why+' No current AQI is available on this page.</div>'+GENERAL;return}
+var c=CATS[selI];
+o.innerHTML='<div class="lbl">User-selected category: <b>'+c.n+' ('+c.r+')</b>, for '+d+', source given: '+sr.replace(/[<>&]/g,'')+'. Not an official live feed. Check that it matches the official AQI for your city.</div>'
++'<div class="adv">'+c.gi+'<div><b>Possible health impact</b>'+c.h+'<div class="src">Source: CPCB AQI table; MoHFW NPCCHH advisory.</div></div></div>'
++'<div class="adv">'+c.gi+'<div><b>General population</b>'+c.g+'<div class="src">Source: MoHFW NPCCHH advisory.</div></div></div>'
++'<div class="adv">'+c.vi+'<div><b>Vulnerable groups</b>'+c.v+'<div class="src">Children, older people, pregnant women, people with heart, lung or brain-circulation conditions, outdoor workers. Source: MoHFW NPCCHH advisory.</div></div></div>'}
+document.querySelectorAll('.cat').forEach(function(b){b.onclick=function(){selI=+b.dataset.i;renderAdv()}});
+document.getElementById('adate').onchange=renderAdv;document.getElementById('asrc').oninput=renderAdv;renderAdv();
+
+(function(){var q=document.getElementById('q'),o=document.getElementById('qout');
+function run(){var t=q.value.trim().toLowerCase();if(t.length<3){o.innerHTML='';return}
+var seen=[],out=[];document.querySelectorAll('#t-safe .adv').forEach(function(a){var x=a.innerText;if(x.toLowerCase().indexOf(t)>-1&&seen.indexOf(x)<0){seen.push(x);out.push(a.outerHTML)}});
+o.innerHTML=out.length?out.join(''):'<div class="lbl">No match in the sourced advice on this page. Try another word, or see the Sources card.</div>'}
+q.oninput=run})();
+
+(function(){var tp=document.getElementById('aitopic'),btn=document.getElementById('aibtn'),st=document.getElementById('aistat'),out=document.getElementById('aiout');
+var cards=[];document.querySelectorAll('#t-safe .adv').forEach(function(a){var b=a.querySelector('b');if(!b)return;var t=b.textContent;if(cards.some(function(c){return c.t===t}))return;
+var body=a.querySelector('div').cloneNode(true);body.querySelectorAll('b,.src').forEach(function(x){x.remove()});cards.push({t:t,body:body.textContent.trim(),src:(a.querySelector('.src')||{}).textContent||''})});
+cards=cards.filter(function(c){return c.body&&c.t.indexOf('Possible health')<0&&c.t.indexOf('General population')<0&&c.t.indexOf('Vulnerable')<0&&c.t.indexOf('General (')<0});
+cards.forEach(function(c,i){var o=document.createElement('option');o.value=i;o.textContent=c.t;tp.appendChild(o)});
+var eng=null,busy=false;
+function esc(x){return x.replace(/[&<>]/g,function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[m]})}
+btn.onclick=async function(){if(busy)return;var c=cards[+tp.value];if(!c)return;
+if(location.protocol==='file:'){st.textContent='The AI needs the page opened from a web address, not a local file.';return}
+if(!navigator.gpu){st.textContent='This browser does not support WebGPU, so the AI cannot run here. The sourced advice above still works.';return}
+busy=true;btn.disabled=true;
+out.innerHTML='<div class="adv"><div><b>Original (official source)</b>'+esc(c.body)+'<div class="src">'+esc(c.src)+'</div></div></div>';
+try{var ad=await navigator.gpu.requestAdapter();if(!ad){throw new Error('No graphics adapter available for WebGPU')}
+if(!eng){st.textContent='Loading AI library...';var w=await import('https://esm.run/@mlc-ai/web-llm@0.2.84');
+var id=ad.features.has('shader-f16')?'SmolLM2-360M-Instruct-q4f16_1-MLC':'SmolLM2-360M-Instruct-q4f32_1-MLC';
+eng=await w.CreateMLCEngine(id,{initProgressCallback:function(p){st.textContent=p.text}})}
+st.textContent='Writing a simpler version...';
+var gen=eng.chat.completions.create({messages:[{role:'system',content:'Rewrite the given safety text in simple, short English. Keep exactly the same meaning. Do not add any new advice, facts, numbers or medical claims. Do not leave anything out.'},{role:'user',content:c.body}],max_tokens:120,temperature:0.2});
+var to=new Promise(function(_,rj){setTimeout(function(){rj(new Error('Timed out after 90 seconds'))},90000)});
+var r=await Promise.race([gen,to]);var txt=(r.choices[0].message.content||'').trim();
+out.innerHTML+='<div class="adv"><div><b>AI-simplified (not official, may be wrong)</b>'+esc(txt)+'<div class="src">Made on your device by a small AI model. If it differs from the original above, trust the original and its source.</div></div></div>';st.textContent='Done.'}
+catch(e){st.textContent='The AI could not run on this device ('+esc(String(e.message||e)).slice(0,120)+'). The sourced advice above is unaffected.'}
+busy=false;btn.disabled=false;btn.textContent='Explain this card'}})();
+pick(0);if(location.hash=="#s"){document.querySelector("nav a[data-t=safe]").click()}if(location.hash=="#f"){document.querySelector("nav a[data-t=fest]").click()}
+</script></body></html>
